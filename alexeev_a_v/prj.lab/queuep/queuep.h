@@ -1,11 +1,12 @@
 #pragma once
-#ifndef QueueR_QueueR_H_20220915
-#define QueueR_QueueR_H_20220915
+#ifndef QueueP_QueueP_H_20220928
+#define QueueP_QueueP_H_20220928
 
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
 #include <vector>
+#include <memory>
 
 class QueueP {
 public:

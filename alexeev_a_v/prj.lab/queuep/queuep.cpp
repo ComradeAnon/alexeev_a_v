@@ -1,4 +1,4 @@
-#include "queuer.h"
+#include "queuep.h"
 
 QueueP::QueueP() :first_node{ nullptr }, size_q{0} {}
 QueueP::~QueueP() { delete first_node; }
