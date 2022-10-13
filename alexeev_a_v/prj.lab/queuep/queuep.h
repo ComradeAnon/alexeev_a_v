@@ -15,22 +15,20 @@ public:
 		friend class QueueP;
 		~Node();
 	private:
-		Node( const int n, Node* next = nullptr);
+		Node( const int n);
 		int value = 0;
-		Node* next_node{ nullptr };
+		std::unique_ptr<Node> next = nullptr;
 	};
 	explicit QueueP(const std::vector<int> & v);
 	QueueP();
 	~QueueP();
-	bool empty() { return size_q == 0; }
-	int pop();
+	bool isEmpty() const noexcept;
+	void pop() noexcept;
 	void push(const int value);
-	size_t size() { return size_q; }
-	const Node* top() { return first_node; };
+	const int & top() const;
 
 private:
-	Node* first_node{ nullptr };
-	size_t size_q = 0;
+	std::unique_ptr<Node> first_node = nullptr;
 };
 
 #endif
